@@ -1,0 +1,31 @@
+figure {
+  @include block('figure', $_imgColor);
+}
+
+figcaption {
+  @include paragraph('figcaption', $_imgColor);
+  margin-top: 0;
+  padding-top: 1.5em;
+  padding-left: 10px;
+}
+
+
+#{$ImgContainer} {
+  @include block('img', $_imgColor);
+
+  > p {
+    @include paragraph('alt', $_imgColor);
+    margin-top: 0;
+
+    &:empty {
+      display: none;
+    }
+  }
+}
+
+img {
+  max-width: 500px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+}

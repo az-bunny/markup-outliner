@@ -1,0 +1,14 @@
+{
+  "name": "sectioning-outliner",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "az-bunny <kanikissa@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel ./src/index.js"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.5"
+  }
+}

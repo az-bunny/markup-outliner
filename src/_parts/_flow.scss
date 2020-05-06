@@ -1,0 +1,15 @@
+$_flowContents: (
+  p,
+);
+
+@each $_flowContent in $_flowContents {
+  #{$_flowContent}:empty {
+    @include error('【error】empty (#{$_flowContent})', $_errorColor);
+  }
+
+  #{$_flowContent} {
+    @include paragraph($_flowContent, $_flowColor);
+  }
+}
+
+

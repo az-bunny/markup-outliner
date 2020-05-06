@@ -1,0 +1,22 @@
+// エラー整形する
+// @params {string} $_selecterName セレクタ名
+// @params {string} $_borderColor 背景の色
+@mixin error($_selecterName, $_backgroundColor) {
+  position: relative;
+  padding: 25px;
+  margin-top: 20px;
+  background-color: $_backgroundColor;
+
+  &::before {
+    content: "#{$_selecterName}"attr(id)attr(data-role);
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    padding: 2px 10px;
+    background-color: $_backgroundColor;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+  }
+}

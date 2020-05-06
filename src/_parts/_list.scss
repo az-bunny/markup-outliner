@@ -1,0 +1,35 @@
+$_lists: (
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+);
+
+@each $_list in $_lists {
+  #{$_list} {
+    @include block($_list, $_listColor);
+  }
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+$_children: (
+  dt,
+  dd,
+);
+
+@each $_child in $_children {
+  #{$_child} {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &::before {
+      background-color: rgba($_listColor, .8);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+$_headings: (
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+);
+
+@each $_heading in $_headings {
+  #{$_heading} {
+    @include paragraph($_heading, $_flowColor);
+  }
+}

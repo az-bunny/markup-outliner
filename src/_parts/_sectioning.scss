@@ -1,0 +1,12 @@
+$_sections: (
+  nav,
+  section,
+  article,
+  aside,
+);
+
+@each $_section in $_sections {
+  #{$_section} {
+    @include block($_section, $_sectionColor);
+  }
+}

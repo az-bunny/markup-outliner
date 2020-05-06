@@ -1,0 +1,33 @@
+// セクショニング・コンテンツを整形する
+// @params {string} $_selecterName セレクタ名
+// @params {string} $_borderColor 枠線の色
+@mixin block($_selecterName, $_borderColor) {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: $_borderColor;
+  transition: background-color .5s;
+  background-color: $_backgroundColor;
+  cursor: crosshair;
+
+  * + & {
+    margin-top: 20px;
+  }
+
+  &:hover {
+    background-color: #fff;
+  }
+
+  &::before {
+    content: "#{$_selecterName}"attr(data-id)attr(data-role);
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    padding: 2px 10px;
+    background-color: $_borderColor;
+    font-size: 14px;
+    color: #fff;
+  }
+}

@@ -1,0 +1,23 @@
+// フローコンテンツを整形する
+// @params {string} $_selecterName セレクタ名
+// @params {string} $_borderColor 枠線の色
+@mixin paragraph($_selecterName, $_borderColor) {
+  $_paddingLeft: 10px;
+  border-left: 2px solid $_borderColor;
+  padding-left: calc(#{$_paddingLeft} + 2.5em);
+  position: relative;
+
+  * + & {
+    margin-top: 10px;
+  }
+
+  &::before {
+    content: "[#{$_selecterName}]";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: $_paddingLeft;
+    color: $_borderColor;
+    font-weight: bold;
+  }
+}
