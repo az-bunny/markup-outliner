@@ -47,7 +47,7 @@ import './bookmarklet.scss'
 {
   const bookmarklet = document.createElement('link');
   bookmarklet.rel = 'stylesheet';
-  bookmarklet.href = 'https://example.com/dist/index.css';
+  bookmarklet.href = 'https://az-bunny.github.io/markup-outliner/dist/index.js';
   document.head.appendChild(bookmarklet);
 }
 

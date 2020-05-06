@@ -230,7 +230,7 @@ require("./bookmarklet.scss");
 {
   var bookmarklet = document.createElement('link');
   bookmarklet.rel = 'stylesheet';
-  bookmarklet.href = 'http://sectioning-outliner.io/dist/index.css';
+  bookmarklet.href = 'https://az-bunny.github.io/markup-outliner/dist/index.js';
   document.head.appendChild(bookmarklet);
 } // img要素周辺を生成
 
@@ -285,7 +285,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52590" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49956" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
