@@ -1,0 +1,1023 @@
+@charset "UTF-8";
+/*!
+ * ress.css • v2.0.4
+ * MIT License
+ * github.com/filipelinhares/ress
+ */
+/* # =================================================================
+   # Global selectors
+   # ================================================================= */
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  /* Prevent adjustments of font size after orientation changes in iOS */
+  word-break: normal;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+* {
+  padding: 0;
+  /* Reset `padding` and `margin` of all elements */
+  margin: 0;
+}
+
+/* # =================================================================
+   # General elements
+   # ================================================================= */
+hr {
+  overflow: visible;
+  /* Show the overflow in Edge and IE */
+  height: 0;
+  /* Add the correct box sizing in Firefox */
+}
+
+details,
+main {
+  display: block;
+  /* Render the `main` element consistently in IE. */
+}
+
+summary {
+  display: list-item;
+  /* Add the correct display in all browsers */
+}
+
+small {
+  font-size: 80%;
+  /* Set font-size to 80% in `small` elements */
+}
+
+[hidden] {
+  display: none;
+  /* Add the correct display in IE */
+}
+
+abbr[title] {
+  border-bottom: none;
+  /* Remove the bottom border in Chrome 57 */
+  /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+a {
+  background-color: transparent;
+  /* Remove the gray background on active links in IE 10 */
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+  /* Remove the outline when hovering in all browsers */
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* Specify the font family of code elements */
+}
+
+pre {
+  font-size: 1em;
+  /* Correct the odd `em` font sizing in all browsers */
+}
+
+b,
+strong {
+  font-weight: bolder;
+  /* Add the correct font weight in Chrome, Edge, and Safari */
+}
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* # =================================================================
+   # Forms
+   # ================================================================= */
+input {
+  border-radius: 0;
+}
+
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+  cursor: default;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+  /* Correct the cursor style of increment and decrement buttons in Chrome */
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px;
+  /* Correct the outline style in Safari */
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Remove the inner padding in Chrome and Safari on macOS */
+}
+
+textarea {
+  overflow: auto;
+  /* Internet Explorer 11+ */
+  resize: vertical;
+  /* Specify textarea resizability */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* Specify font inheritance of form elements */
+}
+
+optgroup {
+  font-weight: bold;
+  /* Restore the font weight unset by the previous rule */
+}
+
+button {
+  overflow: visible;
+  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+button,
+select {
+  text-transform: none;
+  /* Firefox 40+, Internet Explorer 11- */
+}
+
+/* Apply cursor pointer to button elements */
+button,
+[type=button],
+[type=reset],
+[type=submit],
+[role=button] {
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS */
+}
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+}
+
+/* Style select like a standard input */
+select {
+  -moz-appearance: none;
+  /* Firefox 36+ */
+  -webkit-appearance: none;
+  /* Chrome 41+ */
+}
+
+select::-ms-expand {
+  display: none;
+  /* Internet Explorer 11+ */
+}
+
+select::-ms-value {
+  color: currentColor;
+  /* Internet Explorer 11+ */
+}
+
+legend {
+  border: 0;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+  /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge and IE */
+  white-space: normal;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge 18- and IE */
+}
+
+::-webkit-file-upload-button {
+  /* Correct the inability to style clickable types in iOS and Safari */
+  -webkit-appearance: button;
+  color: inherit;
+  font: inherit;
+  /* Change font properties to `inherit` in Chrome and Safari */
+}
+
+/* # =================================================================
+   # Specify media element style
+   # ================================================================= */
+img {
+  border-style: none;
+  /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+/* # =================================================================
+   # Accessibility
+   # ================================================================= */
+/* Hide content from screens but not screenreaders */
+@media screen {
+  [hidden~=screen] {
+    display: inherit;
+  }
+
+  [hidden~=screen]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+  }
+}
+/* Specify the progress cursor of updating elements */
+[aria-busy=true] {
+  cursor: progress;
+}
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled] {
+  cursor: default;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+}
+
+header {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #ff8080;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + header {
+  margin-top: 20px;
+}
+header:hover {
+  background-color: #fff;
+}
+header::before {
+  content: "header" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #ff8080;
+  font-size: 14px;
+  color: #fff;
+}
+
+main {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #ff8080;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + main {
+  margin-top: 20px;
+}
+main:hover {
+  background-color: #fff;
+}
+main::before {
+  content: "main" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #ff8080;
+  font-size: 14px;
+  color: #fff;
+}
+
+footer {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #ff8080;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + footer {
+  margin-top: 20px;
+}
+footer:hover {
+  background-color: #fff;
+}
+footer::before {
+  content: "footer" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #ff8080;
+  font-size: 14px;
+  color: #fff;
+}
+
+nav {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #ff8080;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + nav {
+  margin-top: 20px;
+}
+nav:hover {
+  background-color: #fff;
+}
+nav::before {
+  content: "nav" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #ff8080;
+  font-size: 14px;
+  color: #fff;
+}
+
+section {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #ff8080;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + section {
+  margin-top: 20px;
+}
+section:hover {
+  background-color: #fff;
+}
+section::before {
+  content: "section" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #ff8080;
+  font-size: 14px;
+  color: #fff;
+}
+
+article {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #ff8080;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + article {
+  margin-top: 20px;
+}
+article:hover {
+  background-color: #fff;
+}
+article::before {
+  content: "article" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #ff8080;
+  font-size: 14px;
+  color: #fff;
+}
+
+aside {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #ff8080;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + aside {
+  margin-top: 20px;
+}
+aside:hover {
+  background-color: #fff;
+}
+aside::before {
+  content: "aside" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #ff8080;
+  font-size: 14px;
+  color: #fff;
+}
+
+div:empty {
+  position: relative;
+  padding: 25px;
+  margin-top: 20px;
+  background-color: #ff0000;
+}
+div:empty::before {
+  content: "【error】empty (div)" attr(id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #ff0000;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+}
+
+div:not(:empty):not(.ImgContainer) {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #787878;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + div:not(:empty):not(.ImgContainer) {
+  margin-top: 20px;
+}
+div:not(:empty):not(.ImgContainer):hover {
+  background-color: #fff;
+}
+div:not(:empty):not(.ImgContainer)::before {
+  content: "div" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #787878;
+  font-size: 14px;
+  color: #fff;
+}
+
+form {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #80a4ff;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + form {
+  margin-top: 20px;
+}
+form:hover {
+  background-color: #fff;
+}
+form::before {
+  content: "form" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #80a4ff;
+  font-size: 14px;
+  color: #fff;
+}
+
+h1 {
+  border-left: 2px solid #daa520;
+  padding-left: calc(10px + 2.5em);
+  position: relative;
+}
+* + h1 {
+  margin-top: 10px;
+}
+h1::before {
+  content: "[h1]";
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 10px;
+  color: #daa520;
+  font-weight: bold;
+}
+
+h2 {
+  border-left: 2px solid #daa520;
+  padding-left: calc(10px + 2.5em);
+  position: relative;
+}
+* + h2 {
+  margin-top: 10px;
+}
+h2::before {
+  content: "[h2]";
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 10px;
+  color: #daa520;
+  font-weight: bold;
+}
+
+h3 {
+  border-left: 2px solid #daa520;
+  padding-left: calc(10px + 2.5em);
+  position: relative;
+}
+* + h3 {
+  margin-top: 10px;
+}
+h3::before {
+  content: "[h3]";
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 10px;
+  color: #daa520;
+  font-weight: bold;
+}
+
+h4 {
+  border-left: 2px solid #daa520;
+  padding-left: calc(10px + 2.5em);
+  position: relative;
+}
+* + h4 {
+  margin-top: 10px;
+}
+h4::before {
+  content: "[h4]";
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 10px;
+  color: #daa520;
+  font-weight: bold;
+}
+
+h5 {
+  border-left: 2px solid #daa520;
+  padding-left: calc(10px + 2.5em);
+  position: relative;
+}
+* + h5 {
+  margin-top: 10px;
+}
+h5::before {
+  content: "[h5]";
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 10px;
+  color: #daa520;
+  font-weight: bold;
+}
+
+h6 {
+  border-left: 2px solid #daa520;
+  padding-left: calc(10px + 2.5em);
+  position: relative;
+}
+* + h6 {
+  margin-top: 10px;
+}
+h6::before {
+  content: "[h6]";
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 10px;
+  color: #daa520;
+  font-weight: bold;
+}
+
+p:empty {
+  position: relative;
+  padding: 25px;
+  margin-top: 20px;
+  background-color: #ff0000;
+}
+p:empty::before {
+  content: "【error】empty (p)" attr(id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #ff0000;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+}
+
+p {
+  border-left: 2px solid #daa520;
+  padding-left: calc(10px + 2.5em);
+  position: relative;
+}
+* + p {
+  margin-top: 10px;
+}
+p::before {
+  content: "[p]";
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 10px;
+  color: #daa520;
+  font-weight: bold;
+}
+
+dl {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #c675e9;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + dl {
+  margin-top: 20px;
+}
+dl:hover {
+  background-color: #fff;
+}
+dl::before {
+  content: "dl" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #c675e9;
+  font-size: 14px;
+  color: #fff;
+}
+
+dt {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #c675e9;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + dt {
+  margin-top: 20px;
+}
+dt:hover {
+  background-color: #fff;
+}
+dt::before {
+  content: "dt" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #c675e9;
+  font-size: 14px;
+  color: #fff;
+}
+
+dd {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #c675e9;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + dd {
+  margin-top: 20px;
+}
+dd:hover {
+  background-color: #fff;
+}
+dd::before {
+  content: "dd" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #c675e9;
+  font-size: 14px;
+  color: #fff;
+}
+
+ul {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #c675e9;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + ul {
+  margin-top: 20px;
+}
+ul:hover {
+  background-color: #fff;
+}
+ul::before {
+  content: "ul" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #c675e9;
+  font-size: 14px;
+  color: #fff;
+}
+
+ol {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #c675e9;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + ol {
+  margin-top: 20px;
+}
+ol:hover {
+  background-color: #fff;
+}
+ol::before {
+  content: "ol" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #c675e9;
+  font-size: 14px;
+  color: #fff;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+dt:first-child {
+  margin-top: 0;
+}
+dt::before {
+  background-color: rgba(198, 117, 233, 0.8);
+}
+
+dd:first-child {
+  margin-top: 0;
+}
+dd::before {
+  background-color: rgba(198, 117, 233, 0.8);
+}
+
+a::after {
+  word-break: break-word;
+}
+a:not([href^=tel])::after {
+  content: "(URL: " attr(href) ")";
+}
+a:not([href^=tel])[target=_blank]::after {
+  content: "(URL: " attr(href) " [別ウィンドウ] )";
+}
+a:not([href^=tel])[href^="#"]::after {
+  content: "(URL: " attr(href) " [ページ内遷移] )";
+}
+a:not([href^=tel])[href^=http]::after {
+  content: "(URL: " attr(href) " [外部サイト] )";
+}
+a[href^=tel]::after {
+  content: "(" attr(href) ")";
+}
+
+figure {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #20b2aa;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + figure {
+  margin-top: 20px;
+}
+figure:hover {
+  background-color: #fff;
+}
+figure::before {
+  content: "figure" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #20b2aa;
+  font-size: 14px;
+  color: #fff;
+}
+
+figcaption {
+  border-left: 2px solid #20b2aa;
+  padding-left: calc(10px + 2.5em);
+  position: relative;
+  margin-top: 0;
+  padding-top: 1.5em;
+  padding-left: 10px;
+}
+* + figcaption {
+  margin-top: 10px;
+}
+figcaption::before {
+  content: "[figcaption]";
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 10px;
+  color: #20b2aa;
+  font-weight: bold;
+}
+
+.ImgContainer {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #20b2aa;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+* + .ImgContainer {
+  margin-top: 20px;
+}
+.ImgContainer:hover {
+  background-color: #fff;
+}
+.ImgContainer::before {
+  content: "img" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #20b2aa;
+  font-size: 14px;
+  color: #fff;
+}
+.ImgContainer > p {
+  border-left: 2px solid #20b2aa;
+  padding-left: calc(10px + 2.5em);
+  position: relative;
+  margin-top: 0;
+}
+* + .ImgContainer > p {
+  margin-top: 10px;
+}
+.ImgContainer > p::before {
+  content: "[alt]";
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 10px;
+  color: #20b2aa;
+  font-weight: bold;
+}
+.ImgContainer > p:empty {
+  display: none;
+}
+
+img {
+  max-width: 500px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+}
+
+/*# sourceMappingURL=/index.css.map */
