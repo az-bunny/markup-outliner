@@ -230,7 +230,7 @@ require("./bookmarklet.scss");
 {
   var bookmarklet = document.createElement('link');
   bookmarklet.rel = 'stylesheet';
-  bookmarklet.href = 'https://az-bunny.github.io/markup-outliner/dist/index.js';
+  bookmarklet.href = 'https://az-bunny.github.io/markup-outliner/dist/index.css';
   document.head.appendChild(bookmarklet);
 } // img要素周辺を生成
 
