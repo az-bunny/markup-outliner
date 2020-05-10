@@ -7,8 +7,10 @@ $_headings: (
   h6,
 );
 
-@each $_heading in $_headings {
-  #{$_heading} {
-    @include paragraph($_heading, $_flowColor);
+#mo {
+  @each $_heading in $_headings {
+    #{$_heading} {
+      @include paragraph($_heading, $_flowColor);
+    }
   }
 }

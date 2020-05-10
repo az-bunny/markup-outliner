@@ -11,7 +11,7 @@
   background-color: $_backgroundColor;
   cursor: crosshair;
 
-  * + & {
+  &:not(:first-child) {
     margin-top: 20px;
   }
 

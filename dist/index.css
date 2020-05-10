@@ -321,7 +321,7 @@ body {
   background-color: #f5f5f5;
 }
 
-header {
+#mo header {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -331,13 +331,13 @@ header {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + header {
+#mo header:not(:first-child) {
   margin-top: 20px;
 }
-header:hover {
+#mo header:hover {
   background-color: #fff;
 }
-header::before {
+#mo header::before {
   content: "header" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -348,8 +348,7 @@ header::before {
   font-size: 14px;
   color: #fff;
 }
-
-main {
+#mo main {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -359,13 +358,13 @@ main {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + main {
+#mo main:not(:first-child) {
   margin-top: 20px;
 }
-main:hover {
+#mo main:hover {
   background-color: #fff;
 }
-main::before {
+#mo main::before {
   content: "main" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -376,8 +375,7 @@ main::before {
   font-size: 14px;
   color: #fff;
 }
-
-footer {
+#mo footer {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -387,13 +385,13 @@ footer {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + footer {
+#mo footer:not(:first-child) {
   margin-top: 20px;
 }
-footer:hover {
+#mo footer:hover {
   background-color: #fff;
 }
-footer::before {
+#mo footer::before {
   content: "footer" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -405,7 +403,7 @@ footer::before {
   color: #fff;
 }
 
-nav {
+#mo nav {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -415,13 +413,13 @@ nav {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + nav {
+#mo nav:not(:first-child) {
   margin-top: 20px;
 }
-nav:hover {
+#mo nav:hover {
   background-color: #fff;
 }
-nav::before {
+#mo nav::before {
   content: "nav" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -432,8 +430,7 @@ nav::before {
   font-size: 14px;
   color: #fff;
 }
-
-section {
+#mo section {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -443,13 +440,13 @@ section {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + section {
+#mo section:not(:first-child) {
   margin-top: 20px;
 }
-section:hover {
+#mo section:hover {
   background-color: #fff;
 }
-section::before {
+#mo section::before {
   content: "section" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -460,8 +457,7 @@ section::before {
   font-size: 14px;
   color: #fff;
 }
-
-article {
+#mo article {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -471,13 +467,13 @@ article {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + article {
+#mo article:not(:first-child) {
   margin-top: 20px;
 }
-article:hover {
+#mo article:hover {
   background-color: #fff;
 }
-article::before {
+#mo article::before {
   content: "article" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -488,8 +484,7 @@ article::before {
   font-size: 14px;
   color: #fff;
 }
-
-aside {
+#mo aside {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -499,13 +494,13 @@ aside {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + aside {
+#mo aside:not(:first-child) {
   margin-top: 20px;
 }
-aside:hover {
+#mo aside:hover {
   background-color: #fff;
 }
-aside::before {
+#mo aside::before {
   content: "aside" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -517,14 +512,14 @@ aside::before {
   color: #fff;
 }
 
-div:empty {
+#mo div:empty {
   position: relative;
   padding: 25px;
   margin-top: 20px;
   background-color: #ff0000;
 }
-div:empty::before {
-  content: "【error】empty (div)" attr(id) attr(data-role);
+#mo div:empty::before {
+  content: "【error】empty (div) " attr(id) attr(data-role);
   position: absolute;
   display: inline-block;
   top: 0;
@@ -535,8 +530,7 @@ div:empty::before {
   color: #fff;
   font-weight: bold;
 }
-
-div:not(:empty):not(.ImgContainer) {
+#mo div:not(:empty):not(.ImgContainer) {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -546,13 +540,13 @@ div:not(:empty):not(.ImgContainer) {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + div:not(:empty):not(.ImgContainer) {
+#mo div:not(:empty):not(.ImgContainer):not(:first-child) {
   margin-top: 20px;
 }
-div:not(:empty):not(.ImgContainer):hover {
+#mo div:not(:empty):not(.ImgContainer):hover {
   background-color: #fff;
 }
-div:not(:empty):not(.ImgContainer)::before {
+#mo div:not(:empty):not(.ImgContainer)::before {
   content: "div" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -563,8 +557,7 @@ div:not(:empty):not(.ImgContainer)::before {
   font-size: 14px;
   color: #fff;
 }
-
-form {
+#mo form {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -574,13 +567,13 @@ form {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + form {
+#mo form:not(:first-child) {
   margin-top: 20px;
 }
-form:hover {
+#mo form:hover {
   background-color: #fff;
 }
-form::before {
+#mo form::before {
   content: "form" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -592,15 +585,15 @@ form::before {
   color: #fff;
 }
 
-h1 {
+#mo h1 {
   border-left: 2px solid #daa520;
   padding-left: calc(10px + 2.5em);
   position: relative;
 }
-* + h1 {
+#mo h1:not(:first-child) {
   margin-top: 10px;
 }
-h1::before {
+#mo h1::before {
   content: "[h1]";
   position: absolute;
   display: inline-block;
@@ -609,16 +602,15 @@ h1::before {
   color: #daa520;
   font-weight: bold;
 }
-
-h2 {
+#mo h2 {
   border-left: 2px solid #daa520;
   padding-left: calc(10px + 2.5em);
   position: relative;
 }
-* + h2 {
+#mo h2:not(:first-child) {
   margin-top: 10px;
 }
-h2::before {
+#mo h2::before {
   content: "[h2]";
   position: absolute;
   display: inline-block;
@@ -627,16 +619,15 @@ h2::before {
   color: #daa520;
   font-weight: bold;
 }
-
-h3 {
+#mo h3 {
   border-left: 2px solid #daa520;
   padding-left: calc(10px + 2.5em);
   position: relative;
 }
-* + h3 {
+#mo h3:not(:first-child) {
   margin-top: 10px;
 }
-h3::before {
+#mo h3::before {
   content: "[h3]";
   position: absolute;
   display: inline-block;
@@ -645,16 +636,15 @@ h3::before {
   color: #daa520;
   font-weight: bold;
 }
-
-h4 {
+#mo h4 {
   border-left: 2px solid #daa520;
   padding-left: calc(10px + 2.5em);
   position: relative;
 }
-* + h4 {
+#mo h4:not(:first-child) {
   margin-top: 10px;
 }
-h4::before {
+#mo h4::before {
   content: "[h4]";
   position: absolute;
   display: inline-block;
@@ -663,16 +653,15 @@ h4::before {
   color: #daa520;
   font-weight: bold;
 }
-
-h5 {
+#mo h5 {
   border-left: 2px solid #daa520;
   padding-left: calc(10px + 2.5em);
   position: relative;
 }
-* + h5 {
+#mo h5:not(:first-child) {
   margin-top: 10px;
 }
-h5::before {
+#mo h5::before {
   content: "[h5]";
   position: absolute;
   display: inline-block;
@@ -681,16 +670,15 @@ h5::before {
   color: #daa520;
   font-weight: bold;
 }
-
-h6 {
+#mo h6 {
   border-left: 2px solid #daa520;
   padding-left: calc(10px + 2.5em);
   position: relative;
 }
-* + h6 {
+#mo h6:not(:first-child) {
   margin-top: 10px;
 }
-h6::before {
+#mo h6::before {
   content: "[h6]";
   position: absolute;
   display: inline-block;
@@ -700,14 +688,14 @@ h6::before {
   font-weight: bold;
 }
 
-p:empty {
+#mo p:empty {
   position: relative;
   padding: 25px;
   margin-top: 20px;
   background-color: #ff0000;
 }
-p:empty::before {
-  content: "【error】empty (p)" attr(id) attr(data-role);
+#mo p:empty::before {
+  content: "【error】empty (p) " attr(id) attr(data-role);
   position: absolute;
   display: inline-block;
   top: 0;
@@ -718,16 +706,15 @@ p:empty::before {
   color: #fff;
   font-weight: bold;
 }
-
-p {
+#mo p {
   border-left: 2px solid #daa520;
   padding-left: calc(10px + 2.5em);
   position: relative;
 }
-* + p {
+#mo p:not(:first-child) {
   margin-top: 10px;
 }
-p::before {
+#mo p::before {
   content: "[p]";
   position: absolute;
   display: inline-block;
@@ -737,7 +724,7 @@ p::before {
   font-weight: bold;
 }
 
-dl {
+#mo dl {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -747,13 +734,13 @@ dl {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + dl {
+#mo dl:not(:first-child) {
   margin-top: 20px;
 }
-dl:hover {
+#mo dl:hover {
   background-color: #fff;
 }
-dl::before {
+#mo dl::before {
   content: "dl" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -764,8 +751,7 @@ dl::before {
   font-size: 14px;
   color: #fff;
 }
-
-dt {
+#mo dt {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -775,13 +761,13 @@ dt {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + dt {
+#mo dt:not(:first-child) {
   margin-top: 20px;
 }
-dt:hover {
+#mo dt:hover {
   background-color: #fff;
 }
-dt::before {
+#mo dt::before {
   content: "dt" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -792,8 +778,7 @@ dt::before {
   font-size: 14px;
   color: #fff;
 }
-
-dd {
+#mo dd {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -803,13 +788,13 @@ dd {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + dd {
+#mo dd:not(:first-child) {
   margin-top: 20px;
 }
-dd:hover {
+#mo dd:hover {
   background-color: #fff;
 }
-dd::before {
+#mo dd::before {
   content: "dd" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -820,8 +805,7 @@ dd::before {
   font-size: 14px;
   color: #fff;
 }
-
-ul {
+#mo ul {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -831,13 +815,13 @@ ul {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + ul {
+#mo ul:not(:first-child) {
   margin-top: 20px;
 }
-ul:hover {
+#mo ul:hover {
   background-color: #fff;
 }
-ul::before {
+#mo ul::before {
   content: "ul" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -848,8 +832,7 @@ ul::before {
   font-size: 14px;
   color: #fff;
 }
-
-ol {
+#mo ol {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -859,13 +842,13 @@ ol {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + ol {
+#mo ol:not(:first-child) {
   margin-top: 20px;
 }
-ol:hover {
+#mo ol:hover {
   background-color: #fff;
 }
-ol::before {
+#mo ol::before {
   content: "ol" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -876,86 +859,77 @@ ol::before {
   font-size: 14px;
   color: #fff;
 }
-
-ul,
-ol {
+#mo ul,
+#mo ol {
   list-style-position: inside;
 }
-
-li {
+#mo li {
   padding-left: 20px;
   text-indent: -20px;
 }
-
-dt:first-child {
+#mo dt:first-child {
   margin-top: 0;
 }
-dt::before {
+#mo dt::before {
+  background-color: rgba(198, 117, 233, 0.8);
+}
+#mo dd:first-child {
+  margin-top: 0;
+}
+#mo dd::before {
   background-color: rgba(198, 117, 233, 0.8);
 }
 
-dd:first-child {
-  margin-top: 0;
-}
-dd::before {
-  background-color: rgba(198, 117, 233, 0.8);
-}
-
-thead {
+#mo thead {
   border: 1px solid #aaa;
 }
-
-tbody {
+#mo tbody {
   border: 1px solid #aaa;
 }
-
-tfoot {
+#mo tfoot {
   border: 1px solid #aaa;
 }
-
-th {
+#mo th {
   border: 1px solid #aaa;
 }
-
-td {
+#mo td {
   border: 1px solid #aaa;
 }
-
-table {
+#mo table {
   border-collapse: collapse;
 }
-table thead,
-table tfoot {
+#mo table thead,
+#mo table tfoot {
   background-color: #ccc;
 }
-table tfoot {
+#mo table tfoot {
   border-width: 2px;
 }
-table th,
-table td {
+#mo table th,
+#mo table td {
   padding: 5px 10px;
 }
 
-a::after {
+#mo a::after {
   word-break: break-word;
 }
-a:not([href^=tel])::after {
+#mo a:not([href^=tel])::after {
   content: "(URL: " attr(href) ")";
 }
-a:not([href^=tel])[target=_blank]::after {
+#mo a:not([href^=tel])[target=_blank]::after {
   content: "(URL: " attr(href) " [別ウィンドウ] )";
 }
-a:not([href^=tel])[href^="#"]::after {
+#mo a:not([href^=tel])[href^="#"]::after {
   content: "(URL: " attr(href) " [ページ内遷移] )";
 }
-a:not([href^=tel])[href^=http]::after {
+#mo a:not([href^=tel])[href^=http]::after {
   content: "(URL: " attr(href) " [外部サイト] )";
 }
-a[href^=tel]::after {
+#mo a[href^=tel]::after {
   content: "(" attr(href) ")";
 }
 
-figure {
+#mo figure {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -965,13 +939,13 @@ figure {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + figure {
+#mo figure:not(:first-child) {
   margin-top: 20px;
 }
-figure:hover {
+#mo figure:hover {
   background-color: #fff;
 }
-figure::before {
+#mo figure::before {
   content: "figure" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -982,8 +956,7 @@ figure::before {
   font-size: 14px;
   color: #fff;
 }
-
-figcaption {
+#mo figcaption {
   border-left: 2px solid #20b2aa;
   padding-left: calc(10px + 2.5em);
   position: relative;
@@ -991,10 +964,10 @@ figcaption {
   padding-top: 1.5em;
   padding-left: 10px;
 }
-* + figcaption {
+#mo figcaption:not(:first-child) {
   margin-top: 10px;
 }
-figcaption::before {
+#mo figcaption::before {
   content: "[figcaption]";
   position: absolute;
   display: inline-block;
@@ -1003,8 +976,7 @@ figcaption::before {
   color: #20b2aa;
   font-weight: bold;
 }
-
-.ImgContainer {
+#mo .ImgContainer {
   position: relative;
   padding: 30px 20px 15px;
   border-style: solid;
@@ -1014,13 +986,13 @@ figcaption::before {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-* + .ImgContainer {
+#mo .ImgContainer:not(:first-child) {
   margin-top: 20px;
 }
-.ImgContainer:hover {
+#mo .ImgContainer:hover {
   background-color: #fff;
 }
-.ImgContainer::before {
+#mo .ImgContainer::before {
   content: "img" attr(data-id) attr(data-role);
   position: absolute;
   display: inline-block;
@@ -1031,16 +1003,16 @@ figcaption::before {
   font-size: 14px;
   color: #fff;
 }
-.ImgContainer > p {
+#mo .ImgContainer > p {
   border-left: 2px solid #20b2aa;
   padding-left: calc(10px + 2.5em);
   position: relative;
   margin-top: 0;
 }
-* + .ImgContainer > p {
+#mo .ImgContainer > p:not(:first-child) {
   margin-top: 10px;
 }
-.ImgContainer > p::before {
+#mo .ImgContainer > p::before {
   content: "[alt]";
   position: absolute;
   display: inline-block;
@@ -1049,11 +1021,10 @@ figcaption::before {
   color: #20b2aa;
   font-weight: bold;
 }
-.ImgContainer > p:empty {
+#mo .ImgContainer > p:empty {
   display: none;
 }
-
-img {
+#mo img {
   max-width: 500px;
   max-height: 500px;
   width: auto;

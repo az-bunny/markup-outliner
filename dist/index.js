@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"_js/_dom.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"_js/_load_css.js":[function(require,module,exports) {
 {
   var cssLinks = document.querySelectorAll('[rel=\'stylesheet\'], [type=\'text\/css\']');
   cssLinks.forEach(function (link) {
@@ -202,6 +202,18 @@ module.hot.accept(reloadCSS);
   styledElements.forEach(function (element) {
     element.removeAttribute('style');
   });
+}
+{
+  var bookmarklet = document.createElement('link');
+  bookmarklet.rel = 'stylesheet'; // bookmarklet.href = 'https://az-bunny.github.io/markup-outliner/dist/index.css';
+
+  bookmarklet.href = 'http://markup-outliner.io/dist/index.css';
+  document.head.appendChild(bookmarklet);
+}
+},{}],"_js/_create_dom.js":[function(require,module,exports) {
+// body要素を包括
+{
+  document.body.innerHTML = '<div id="mo">' + document.body.innerHTML + '</div>';
 } // IDとrole属性値付与
 
 {
@@ -222,12 +234,6 @@ module.hot.accept(reloadCSS);
       }
     });
   });
-}
-{
-  var bookmarklet = document.createElement('link');
-  bookmarklet.rel = 'stylesheet';
-  bookmarklet.href = 'https://az-bunny.github.io/markup-outliner/dist/index.css';
-  document.head.appendChild(bookmarklet);
 } // img要素周辺を生成
 
 {
@@ -258,8 +264,10 @@ module.hot.accept(reloadCSS);
 
 require("./_css/bookmarklet.scss");
 
-require("./_js/_dom.js");
-},{"./_css/bookmarklet.scss":"_css/bookmarklet.scss","./_js/_dom.js":"_js/_dom.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+require("./_js/_load_css.js");
+
+require("./_js/_create_dom.js");
+},{"./_css/bookmarklet.scss":"_css/bookmarklet.scss","./_js/_load_css.js":"_js/_load_css.js","./_js/_create_dom.js":"_js/_create_dom.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

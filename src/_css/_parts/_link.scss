@@ -1,36 +1,37 @@
-a {
-  
-  &::after {
-    word-break: break-word;
-  }
-  
-  &:not([href^="tel"]) {
+#mo {
+  a {
     &::after {
-      content: '(URL: 'attr(href)')';
+      word-break: break-word;
     }
-
-    &[target="_blank"] {
+    
+    &:not([href^="tel"]) {
       &::after {
-        content: '(URL: 'attr(href) ' [別ウィンドウ] )';
+        content: '(URL: 'attr(href)')';
+      }
+  
+      &[target="_blank"] {
+        &::after {
+          content: '(URL: 'attr(href) ' [別ウィンドウ] )';
+        }
+      }
+  
+      &[href^="#"] {
+        &::after {
+          content: '(URL: 'attr(href) ' [ページ内遷移] )';
+        }
+      }
+  
+      &[href^="http"] {
+        &::after {
+          content: '(URL: 'attr(href) ' [外部サイト] )';
+        }
       }
     }
-
-    &[href^="#"] {
+  
+    &[href^="tel"] {
       &::after {
-        content: '(URL: 'attr(href) ' [ページ内遷移] )';
+        content: '('attr(href)')';
       }
-    }
-
-    &[href^="http"] {
-      &::after {
-        content: '(URL: 'attr(href) ' [外部サイト] )';
-      }
-    }
-  }
-
-  &[href^="tel"] {
-    &::after {
-      content: '('attr(href)')';
     }
   }
 }

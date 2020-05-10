@@ -6,35 +6,37 @@ $_lists: (
   ol,
 );
 
-@each $_list in $_lists {
-  #{$_list} {
-    @include block($_list, $_listColor);
-  }
-}
-
-ul,
-ol {
-  list-style-position: inside;
-}
-
-li {
-  padding-left: 20px;
-  text-indent: -20px;
-}
-
-$_dfnChildren: (
-  dt,
-  dd,
-);
-
-@each $_dfnChild in $_dfnChildren {
-  #{$_dfnChild} {
-    &:first-child {
-      margin-top: 0;
+#mo {
+  @each $_list in $_lists {
+    #{$_list} {
+      @include block($_list, $_listColor);
     }
-
-    &::before {
-      background-color: rgba($_listColor, .8);
+  }
+  
+  ul,
+  ol {
+    list-style-position: inside;
+  }
+  
+  li {
+    padding-left: 20px;
+    text-indent: -20px;
+  }
+  
+  $_dfnChildren: (
+    dt,
+    dd,
+  );
+  
+  @each $_dfnChild in $_dfnChildren {
+    #{$_dfnChild} {
+      &:first-child {
+        margin-top: 0;
+      }
+  
+      &::before {
+        background-color: rgba($_listColor, .8);
+      }
     }
   }
 }

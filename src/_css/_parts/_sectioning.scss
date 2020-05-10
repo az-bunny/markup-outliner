@@ -5,8 +5,10 @@ $_sections: (
   aside,
 );
 
-@each $_section in $_sections {
-  #{$_section} {
-    @include block($_section, $_sectionColor);
+#mo {
+  @each $_section in $_sections {
+    #{$_section} {
+      @include block($_section, $_sectionColor);
+    }
   }
 }

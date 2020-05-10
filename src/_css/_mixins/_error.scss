@@ -8,7 +8,7 @@
   background-color: $_backgroundColor;
 
   &::before {
-    content: "#{$_selecterName}"attr(id)attr(data-role);
+    content: "#{$_selecterName} "attr(id)attr(data-role);
     position: absolute;
     display: inline-block;
     top: 0;

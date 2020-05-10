@@ -6,26 +6,28 @@ $_tableParts: (
   td,
 );
 
-@each $_tablePart in $_tableParts {
-  #{$_tablePart} {
-    border: 1px solid $_tableLineColor;
-  }
-}
-
-table {
-  border-collapse: collapse;
-  
-  thead,
-  tfoot {
-    background-color: $_tableBgColor;
+#mo {
+  @each $_tablePart in $_tableParts {
+    #{$_tablePart} {
+      border: 1px solid $_tableLineColor;
+    }
   }
   
-  tfoot {
-    border-width: 2px;
-  }
-  
-  th,
-  td {
-    padding: 5px 10px;
+  table {
+    border-collapse: collapse;
+    
+    thead,
+    tfoot {
+      background-color: $_tableBgColor;
+    }
+    
+    tfoot {
+      border-width: 2px;
+    }
+    
+    th,
+    td {
+      padding: 5px 10px;
+    }
   }
 }
