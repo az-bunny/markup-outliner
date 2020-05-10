@@ -184,16 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"bookmarklet.scss":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"_css/bookmarklet.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./bookmarklet.scss");
-
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"_js/_dom.js":[function(require,module,exports) {
 {
   var cssLinks = document.querySelectorAll('[rel=\'stylesheet\'], [type=\'text\/css\']');
   cssLinks.forEach(function (link) {
@@ -257,7 +253,13 @@ require("./bookmarklet.scss");
     }
   });
 }
-},{"./bookmarklet.scss":"bookmarklet.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"index.js":[function(require,module,exports) {
+"use strict";
+
+require("./_css/bookmarklet.scss");
+
+require("./_js/_dom.js");
+},{"./_css/bookmarklet.scss":"_css/bookmarklet.scss","./_js/_dom.js":"_js/_dom.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -285,7 +287,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49956" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55905" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
