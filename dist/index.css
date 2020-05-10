@@ -896,6 +896,41 @@ dd::before {
   background-color: rgba(198, 117, 233, 0.8);
 }
 
+thead {
+  border: 1px solid #aaa;
+}
+
+tbody {
+  border: 1px solid #aaa;
+}
+
+tfoot {
+  border: 1px solid #aaa;
+}
+
+th {
+  border: 1px solid #aaa;
+}
+
+td {
+  border: 1px solid #aaa;
+}
+
+table {
+  border-collapse: collapse;
+}
+table thead,
+table tfoot {
+  background-color: #ccc;
+}
+table tfoot {
+  border-width: 2px;
+}
+table th,
+table td {
+  padding: 5px 10px;
+}
+
 a::after {
   word-break: break-word;
 }
