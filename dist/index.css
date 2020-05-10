@@ -882,6 +882,11 @@ ol {
   list-style-position: inside;
 }
 
+li {
+  padding-left: 20px;
+  text-indent: -20px;
+}
+
 dt:first-child {
   margin-top: 0;
 }

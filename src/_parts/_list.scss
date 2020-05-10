@@ -17,13 +17,18 @@ ol {
   list-style-position: inside;
 }
 
-$_children: (
+li {
+  padding-left: 20px;
+  text-indent: -20px;
+}
+
+$_dfnChildren: (
   dt,
   dd,
 );
 
-@each $_child in $_children {
-  #{$_child} {
+@each $_dfnChild in $_dfnChildren {
+  #{$_dfnChild} {
     &:first-child {
       margin-top: 0;
     }
