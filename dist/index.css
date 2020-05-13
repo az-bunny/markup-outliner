@@ -892,11 +892,7 @@ ol:not(:first-child) {
 }
 #mo ul,
 #mo ol {
-  list-style-position: inside;
-}
-#mo li {
-  padding-left: 20px;
-  text-indent: -20px;
+  padding-left: 30px;
 }
 #mo dt:first-child {
   margin-top: 0;
@@ -927,6 +923,7 @@ ol:not(:first-child) {
   border: 1px solid #aaa;
 }
 #mo table {
+  width: 100%;
   border-collapse: collapse;
 }
 #mo table thead,

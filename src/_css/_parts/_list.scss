@@ -15,12 +15,13 @@ $_lists: (
   
   ul,
   ol {
-    list-style-position: inside;
+    // list-style-position: inside;
+    padding-left: 30px;
   }
   
   li {
-    padding-left: 20px;
-    text-indent: -20px;
+    // padding-left: 20px;
+    // text-indent: -20px;
   }
   
   $_dfnChildren: (
