@@ -205,9 +205,8 @@ module.hot.accept(reloadCSS);
 }
 {
   var bookmarklet = document.createElement('link');
-  bookmarklet.rel = 'stylesheet'; // bookmarklet.href = 'https://az-bunny.github.io/markup-outliner/dist/index.css';
-
-  bookmarklet.href = 'http://markup-outliner.io/dist/index.css';
+  bookmarklet.rel = 'stylesheet';
+  bookmarklet.href = 'https://az-bunny.github.io/markup-outliner/dist/index.css';
   document.head.appendChild(bookmarklet);
 }
 },{}],"_js/_create_dom.js":[function(require,module,exports) {
@@ -259,6 +258,45 @@ module.hot.accept(reloadCSS);
     }
   });
 }
+},{}],"_js/_controllers.js":[function(require,module,exports) {
+var container = document.getElementById('mo');
+var showOutlineState = {
+  div: false
+};
+var divOutlineID = 'mo-show-outline-div'; // add controllers dom
+
+{
+  var functionsContainer = document.createElement('div');
+  var functionsHTML = '<ul>' + '<li>' + 'div outline: ' + "<button id=\"".concat(divOutlineID, "\"></button>") + '</li>' + '</ul>';
+  functionsContainer.id = 'functions-container';
+  functionsContainer.insertAdjacentHTML('afterbegin', functionsHTML);
+  document.body.insertAdjacentElement('afterbegin', functionsContainer);
+}
+var toggleDivOutline = document.getElementById(divOutlineID); // toggle div outline
+
+{
+  updateDivOutline();
+  toggleDivOutline.addEventListener('click', function () {
+    showOutlineState.div = !showOutlineState.div;
+    updateDivOutline();
+  });
+}
+
+function updateDivOutline() {
+  var className = 'show-div';
+  var labels = {
+    show: '✔ show',
+    hide: '✘ hide'
+  };
+
+  if (showOutlineState.div) {
+    toggleDivOutline.innerHTML = labels.hide;
+    container.classList.add(className);
+  } else {
+    toggleDivOutline.innerHTML = labels.show;
+    container.classList.remove(className);
+  }
+}
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -267,7 +305,9 @@ require("./_css/bookmarklet.scss");
 require("./_js/_load_css.js");
 
 require("./_js/_create_dom.js");
-},{"./_css/bookmarklet.scss":"_css/bookmarklet.scss","./_js/_load_css.js":"_js/_load_css.js","./_js/_create_dom.js":"_js/_create_dom.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./_js/_controllers.js");
+},{"./_css/bookmarklet.scss":"_css/bookmarklet.scss","./_js/_load_css.js":"_js/_load_css.js","./_js/_create_dom.js":"_js/_create_dom.js","./_js/_controllers.js":"_js/_controllers.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

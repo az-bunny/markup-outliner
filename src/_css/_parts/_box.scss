@@ -1,13 +1,17 @@
 #mo {
-  div:empty {
-    @include error('【error】empty (div)', $_errorColor);
-  }
-  
-  div:not(:empty):not(#{$ImgContainer}) {
-    @include block('div', $_boxColor);
-  }
-  
   form {
     @include block('form', $_formColor);
+  }
+
+  &#{$showDivClass} {
+    div {
+      &:empty {
+        @include error('【error】empty (div)', $_errorColor);
+      } 
+
+      &:not(:empty):not(#{$ImgContainer}) {
+        @include block('div', $_boxColor);
+      }
+    }
   }
 }

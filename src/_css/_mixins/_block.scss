@@ -11,8 +11,10 @@
   background-color: $_backgroundColor;
   cursor: crosshair;
 
-  &:not(:first-child) {
-    margin-top: 20px;
+  @at-root {
+    #{$_selecterName}:not(:first-child) {
+      margin-top: 20px;
+    }
   }
 
   &:hover {

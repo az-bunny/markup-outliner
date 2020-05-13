@@ -221,13 +221,6 @@ html [type=button],
 }
 
 /* Remove the default button styling in all browsers */
-button,
-input,
-select,
-textarea {
-  background-color: transparent;
-}
-
 /* Style select like a standard input */
 select {
   -moz-appearance: none;
@@ -315,6 +308,23 @@ svg:not([fill]) {
   cursor: default;
 }
 
+#functions-container {
+  position: sticky;
+  top: 10px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  z-index: 9999;
+}
+#functions-container ul {
+  list-style: none;
+  display: flex;
+}
+#functions-container button {
+  padding: 2px 10px;
+}
+
 body {
   max-width: 960px;
   margin: 0 auto;
@@ -331,9 +341,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo header:not(:first-child) {
+header:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo header:hover {
   background-color: #fff;
 }
@@ -358,9 +369,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo main:not(:first-child) {
+main:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo main:hover {
   background-color: #fff;
 }
@@ -385,9 +397,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo footer:not(:first-child) {
+footer:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo footer:hover {
   background-color: #fff;
 }
@@ -413,9 +426,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo nav:not(:first-child) {
+nav:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo nav:hover {
   background-color: #fff;
 }
@@ -440,9 +454,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo section:not(:first-child) {
+section:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo section:hover {
   background-color: #fff;
 }
@@ -467,9 +482,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo article:not(:first-child) {
+article:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo article:hover {
   background-color: #fff;
 }
@@ -494,9 +510,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo aside:not(:first-child) {
+aside:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo aside:hover {
   background-color: #fff;
 }
@@ -512,51 +529,6 @@ body {
   color: #fff;
 }
 
-#mo div:empty {
-  position: relative;
-  padding: 25px;
-  margin-top: 20px;
-  background-color: #ff0000;
-}
-#mo div:empty::before {
-  content: "【error】empty (div) " attr(id) attr(data-role);
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  left: 0;
-  padding: 2px 10px;
-  background-color: #ff0000;
-  font-size: 14px;
-  color: #fff;
-  font-weight: bold;
-}
-#mo div:not(:empty):not(.ImgContainer) {
-  position: relative;
-  padding: 30px 20px 15px;
-  border-style: solid;
-  border-width: 1px 0 0 1px;
-  border-color: #787878;
-  transition: background-color 0.5s;
-  background-color: #f5f5f5;
-  cursor: crosshair;
-}
-#mo div:not(:empty):not(.ImgContainer):not(:first-child) {
-  margin-top: 20px;
-}
-#mo div:not(:empty):not(.ImgContainer):hover {
-  background-color: #fff;
-}
-#mo div:not(:empty):not(.ImgContainer)::before {
-  content: "div" attr(data-id) attr(data-role);
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  left: 0;
-  padding: 2px 10px;
-  background-color: #787878;
-  font-size: 14px;
-  color: #fff;
-}
 #mo form {
   position: relative;
   padding: 30px 20px 15px;
@@ -567,9 +539,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo form:not(:first-child) {
+form:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo form:hover {
   background-color: #fff;
 }
@@ -584,15 +557,62 @@ body {
   font-size: 14px;
   color: #fff;
 }
+#mo.show-div div:empty {
+  position: relative;
+  padding: 25px;
+  margin-top: 20px;
+  background-color: #ff0000;
+}
+#mo.show-div div:empty::before {
+  content: "【error】empty (div) " attr(id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #ff0000;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+}
+#mo.show-div div:not(:empty):not(.ImgContainer) {
+  position: relative;
+  padding: 30px 20px 15px;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: #787878;
+  transition: background-color 0.5s;
+  background-color: #f5f5f5;
+  cursor: crosshair;
+}
+div:not(:first-child) {
+  margin-top: 20px;
+}
+
+#mo.show-div div:not(:empty):not(.ImgContainer):hover {
+  background-color: #fff;
+}
+#mo.show-div div:not(:empty):not(.ImgContainer)::before {
+  content: "div" attr(data-id) attr(data-role);
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 2px 10px;
+  background-color: #787878;
+  font-size: 14px;
+  color: #fff;
+}
 
 #mo h1 {
   border-left: 2px solid #daa520;
   padding-left: calc(10px + 2.5em);
   position: relative;
 }
-#mo h1:not(:first-child) {
+h1:not(:first-child) {
   margin-top: 10px;
 }
+
 #mo h1::before {
   content: "[h1]";
   position: absolute;
@@ -607,9 +627,10 @@ body {
   padding-left: calc(10px + 2.5em);
   position: relative;
 }
-#mo h2:not(:first-child) {
+h2:not(:first-child) {
   margin-top: 10px;
 }
+
 #mo h2::before {
   content: "[h2]";
   position: absolute;
@@ -624,9 +645,10 @@ body {
   padding-left: calc(10px + 2.5em);
   position: relative;
 }
-#mo h3:not(:first-child) {
+h3:not(:first-child) {
   margin-top: 10px;
 }
+
 #mo h3::before {
   content: "[h3]";
   position: absolute;
@@ -641,9 +663,10 @@ body {
   padding-left: calc(10px + 2.5em);
   position: relative;
 }
-#mo h4:not(:first-child) {
+h4:not(:first-child) {
   margin-top: 10px;
 }
+
 #mo h4::before {
   content: "[h4]";
   position: absolute;
@@ -658,9 +681,10 @@ body {
   padding-left: calc(10px + 2.5em);
   position: relative;
 }
-#mo h5:not(:first-child) {
+h5:not(:first-child) {
   margin-top: 10px;
 }
+
 #mo h5::before {
   content: "[h5]";
   position: absolute;
@@ -675,9 +699,10 @@ body {
   padding-left: calc(10px + 2.5em);
   position: relative;
 }
-#mo h6:not(:first-child) {
+h6:not(:first-child) {
   margin-top: 10px;
 }
+
 #mo h6::before {
   content: "[h6]";
   position: absolute;
@@ -711,9 +736,10 @@ body {
   padding-left: calc(10px + 2.5em);
   position: relative;
 }
-#mo p:not(:first-child) {
+p:not(:first-child) {
   margin-top: 10px;
 }
+
 #mo p::before {
   content: "[p]";
   position: absolute;
@@ -734,9 +760,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo dl:not(:first-child) {
+dl:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo dl:hover {
   background-color: #fff;
 }
@@ -761,9 +788,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo dt:not(:first-child) {
+dt:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo dt:hover {
   background-color: #fff;
 }
@@ -788,9 +816,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo dd:not(:first-child) {
+dd:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo dd:hover {
   background-color: #fff;
 }
@@ -815,9 +844,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo ul:not(:first-child) {
+ul:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo ul:hover {
   background-color: #fff;
 }
@@ -842,9 +872,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo ol:not(:first-child) {
+ol:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo ol:hover {
   background-color: #fff;
 }
@@ -939,9 +970,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo figure:not(:first-child) {
+figure:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo figure:hover {
   background-color: #fff;
 }
@@ -964,9 +996,10 @@ body {
   padding-top: 1.5em;
   padding-left: 10px;
 }
-#mo figcaption:not(:first-child) {
+figcaption:not(:first-child) {
   margin-top: 10px;
 }
+
 #mo figcaption::before {
   content: "[figcaption]";
   position: absolute;
@@ -986,9 +1019,10 @@ body {
   background-color: #f5f5f5;
   cursor: crosshair;
 }
-#mo .ImgContainer:not(:first-child) {
+img:not(:first-child) {
   margin-top: 20px;
 }
+
 #mo .ImgContainer:hover {
   background-color: #fff;
 }
@@ -1009,9 +1043,10 @@ body {
   position: relative;
   margin-top: 0;
 }
-#mo .ImgContainer > p:not(:first-child) {
+alt:not(:first-child) {
   margin-top: 10px;
 }
+
 #mo .ImgContainer > p::before {
   content: "[alt]";
   position: absolute;

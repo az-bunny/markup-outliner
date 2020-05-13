@@ -16,7 +16,6 @@
 {
   const bookmarklet = document.createElement('link');
   bookmarklet.rel = 'stylesheet';
-  // bookmarklet.href = 'https://az-bunny.github.io/markup-outliner/dist/index.css';
-  bookmarklet.href = 'http://markup-outliner.io/dist/index.css';
+  bookmarklet.href = 'https://az-bunny.github.io/markup-outliner/dist/index.css';
   document.head.appendChild(bookmarklet);
 }

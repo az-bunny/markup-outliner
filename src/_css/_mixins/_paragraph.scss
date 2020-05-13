@@ -7,8 +7,10 @@
   padding-left: calc(#{$_paddingLeft} + 2.5em);
   position: relative;
 
-  &:not(:first-child) {
-    margin-top: 10px;
+  @at-root {
+    #{$_selecterName}:not(:first-child) {
+      margin-top: 10px;
+    }
   }
 
   &::before {
